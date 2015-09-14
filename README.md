@@ -1,2 +1,2 @@
-# Economy_APIBuySell
-A externally created Economy API for buying and selling to the space engineers server.
+# Economy API Buy Sell Value
+A externally created Economy API for getting buy and sell price.
