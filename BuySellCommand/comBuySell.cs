@@ -68,6 +68,7 @@ namespace BuySellCommand
             newItem.ItemName = Name;
             newItem.BuyPrice = buyPrice;
             newItem.SellPrice = sellPrice;
+            addItem(newItem);
         }
         public static void removeItem(EconomyItem Item)
         {
