@@ -1,0 +1,6 @@
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\bin\Debug\BuySellCommand.exe.config
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\bin\Debug\BuySellCommand.exe
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\bin\Debug\BuySellCommand.pdb
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.csprojResolveAssemblyReference.cache
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.exe
+c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.pdb
