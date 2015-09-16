@@ -11,7 +11,7 @@ namespace BuySellCommand
         static void Main(string[] args)
         {
             EconomyItem SomeBlock = new EconomyItem();
-            SomeBlock.ItemName = "Some Block";
+            SomeBlock.SubTypeName = "SomeBlock";
             SomeBlock.BuyPrice = 4.50m;
             SomeBlock.SellPrice = 3.50m;
             ItemAPI.addItem(SomeBlock);
@@ -19,21 +19,21 @@ namespace BuySellCommand
             Console.WriteLine("================================== Items: ==================================");
             foreach (EconomyItem Item in ItemAPI.getItems())
             {
-                Console.WriteLine(" Item: " + Item.ItemName + " Buy Price: " + Item.BuyPrice + " Sell Price: " + Item.SellPrice);
+                Console.WriteLine(" Item: " + ItemAPI.getHumanFriendly(Item.SubTypeName) + " Buy Price: " + Item.BuyPrice + " Sell Price: " + Item.SellPrice);
             }
             Console.WriteLine("============================================================================");
             Console.WriteLine("Gets the buy and sell price for each item in the whole list... This just proves that we can grab an item buy and sell price seperate using a command.");
             Console.WriteLine("================================== Items: ==================================");
             foreach (EconomyItem Item in ItemAPI.getItems())
             {
-                Console.WriteLine(" Item: " + Item.ItemName + " Buy Price: " + ItemAPI.getBuyPrice(Item).ToString() + " Sell Price: " + ItemAPI.getSellPrice(Item).ToString());
+                Console.WriteLine(" Item: " + ItemAPI.getHumanFriendly(Item.SubTypeName) + " Buy Price: " + ItemAPI.getBuyPrice(Item).ToString() + " Sell Price: " + ItemAPI.getSellPrice(Item).ToString());
             }
             Console.WriteLine("============================================================================");
             Console.WriteLine("Get a single block named 'Some Block' buy price by string input:" + ItemAPI.getBuyPrice("Some Block"));
             Console.WriteLine("Get a single block named 'Some Block' sell price by string input:" + ItemAPI.getSellPrice("Some Block"));
             Console.WriteLine("============================================================================");
             EconomyItem AnotherBlock = new EconomyItem();
-            AnotherBlock.ItemName = "Another Block";
+            AnotherBlock.SubTypeName = "AnotherBlock";
             AnotherBlock.BuyPrice = 1.50m;
             AnotherBlock.SellPrice = 2.50m;
             ItemAPI.addItem(AnotherBlock);
@@ -116,17 +116,56 @@ namespace BuySellCommand
             }
             return sellPrice;
         }
+        public static string getTypeId(EconomyItem Item)
+        {
+            return Item.TypeId;
+        }
+        internal static string getTypeId(string SubTypeName)
+        {
+            string TypeId = "";
+            foreach (EconomyItem Item in Items)
+            {
+                if (Item.SubTypeName == SubTypeName)
+                {
+                    return Item.TypeId;
+                }
+            }
+            return TypeId;
+        }
+        public static string getHumanFriendly(string value)
+        {
+            string HumanFriendly = "";
+            for (int i = 0; i < value.Length; i++)
+            {
+                if (char.IsUpper(value[i]))
+                    HumanFriendly += " ";
+                HumanFriendly += value[i].ToString();
+            }
+            HumanFriendly.Replace("_", " ");
+            return HumanFriendly;
+        }
     }
 
     public class EconomyItem
     {
-        string _Name;
+        string _TypeId;
+        string _SubTypeName;
         decimal _sellPrice;
         decimal _buyPrice;
+        public string TypeId
+        {
+            get { return _TypeId; }
+            set { _TypeId = value; }
+        }
+        public string SubTypeName
+        {
+            get { return _SubTypeName; }
+            set { _SubTypeName = value; }
+        }
         public string ItemName
         {
-            get { return _Name; }
-            set { _Name = value; }
+            get { return _SubTypeName; }
+            set { _SubTypeName = value; }
         }
         public decimal SellPrice
         {

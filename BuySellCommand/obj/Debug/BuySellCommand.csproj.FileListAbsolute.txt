@@ -4,3 +4,9 @@ c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellC
 c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.csprojResolveAssemblyReference.cache
 c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.exe
 c:\users\employees\documents\visual studio 2012\Projects\BuySellCommand\BuySellCommand\obj\Debug\BuySellCommand.pdb
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\bin\Debug\BuySellCommand.exe.config
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\obj\Debug\BuySellCommand.exe
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\obj\Debug\BuySellCommand.pdb
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\obj\Debug\BuySellCommand.csprojResolveAssemblyReference.cache
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\bin\Debug\BuySellCommand.exe
+C:\Users\Employees\Documents\GitHub\Economy_APIBuySell\BuySellCommand\bin\Debug\BuySellCommand.pdb
